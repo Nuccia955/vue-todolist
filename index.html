@@ -10,8 +10,34 @@
     <title>Vue Todo List</title>
 </head>
 <body>
-    <section id="app">
-        
+    <section id="app" class="container">
+        <!-- header -->
+        <header class="mb-50">
+            <div class="logo">
+                <img src="https://www.boolean.careers/images/misc/logo.png" alt="boolean logo">
+            </div>
+        </header>
+
+        <!-- input new ToDo -->
+        <section class="input d-flex justify-content-center mb-50">
+            <input type="text" placeholder="Write your new ToDo" class="flex-grow-1">
+            <button class="button">Add</button>
+        </section>
+
+        <!-- ToDo List -->
+        <main class="todo-list">
+            <ul>
+                <li class="d-flex">
+                    <span class="text flex-grow-1">todo</span>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+                <li class="d-flex">
+                    <span class="text flex-grow-1">todo</span>
+                    <i class="far fa-trash-alt delete"></i>
+                </li>
+            </ul>
+        </main>
+
     </section>
     <script src="./js/main.js"></script>
 </body>
