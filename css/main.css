@@ -78,6 +78,10 @@
     background-color: #00e165;
 }
 
+.todo-list ul li span {
+    cursor: pointer;
+} 
+
 li.completed span {
     text-decoration: line-through;
     color: #bbb;

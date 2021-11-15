@@ -21,7 +21,9 @@
         <!-- input new ToDo -->
         <section class="input d-flex justify-content-center mb-50">
             <input type="text" placeholder="Write your new ToDo" class="flex-grow-1" v-model.trim="newToDo">
-            <button class="button" @click="addToDo">Add</button>
+            <button class="button" 
+                    @click="addToDo"
+            >Add</button>
         </section>
 
         <!-- ToDo List -->
@@ -33,6 +35,7 @@
                 > 
                     <span class="text flex-grow-1" 
                         :class="{completed: todo.completed}"
+                        @click="reverseStatus(index)"
                     > {{ todo.text }} </span>
                     <i class="far fa-trash-alt delete"
                     @click="deleteToDo(index)"></i>

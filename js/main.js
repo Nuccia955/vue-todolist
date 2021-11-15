@@ -31,6 +31,10 @@ const app = new Vue ({
                 });
                 this.newToDo = '';
             }
+        },
+
+        reverseStatus(indexToDo) {
+            this.todos[indexToDo].completed = !this.todos[indexToDo].completed;
         }
     }
 })
