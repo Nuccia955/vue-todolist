@@ -28,13 +28,14 @@
         <main class="todo-list">
             <ul>
                 <li class="d-flex" 
-                    v-for="todo in todos" 
+                    v-for="(todo,index) in todos" 
                     :class="{completed : todo.completed}"
                 > 
                     <span class="text flex-grow-1" 
                         :class="{completed: todo.completed}"
                     > {{ todo.text }} </span>
-                    <i class="far fa-trash-alt delete"></i>
+                    <i class="far fa-trash-alt delete"
+                    @click="deleteToDo(index)"></i>
                 </li>
             </ul>
         </main>

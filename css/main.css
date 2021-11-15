@@ -82,3 +82,9 @@ li.completed span {
     text-decoration: line-through;
     color: #bbb;
 }
+
+.todo-list li .delete:hover,
+.todo-list li .delete:active {
+    color: rgb(201, 1, 1);
+    cursor: pointer;
+}
