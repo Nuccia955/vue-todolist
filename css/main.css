@@ -73,3 +73,12 @@
     left: 5px;
     border: 1px solid black;
 }
+
+.todo-list ul li.completed:before {
+    background-color: #00e165;
+}
+
+li.completed span {
+    text-decoration: line-through;
+    color: #bbb;
+}

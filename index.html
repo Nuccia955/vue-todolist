@@ -27,12 +27,13 @@
         <!-- ToDo List -->
         <main class="todo-list">
             <ul>
-                <li class="d-flex">
-                    <span class="text flex-grow-1">todo</span>
-                    <i class="far fa-trash-alt delete"></i>
-                </li>
-                <li class="d-flex">
-                    <span class="text flex-grow-1">todo</span>
+                <li class="d-flex" 
+                    v-for="todo in todos" 
+                    :class="{completed : todo.completed}"
+                > 
+                    <span class="text flex-grow-1" 
+                        :class="{completed: todo.completed}"
+                    > {{ todo.text }} </span>
                     <i class="far fa-trash-alt delete"></i>
                 </li>
             </ul>
