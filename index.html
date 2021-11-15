@@ -20,7 +20,11 @@
 
         <!-- input new ToDo -->
         <section class="input d-flex justify-content-center mb-50">
-            <input type="text" placeholder="Write your new ToDo" class="flex-grow-1" v-model.trim="newToDo">
+            <input type="text"
+                   placeholder="Write your new ToDo" 
+                   class="flex-grow-1" 
+                   v-model.trim="newToDo"
+                   @keyup.enter="addToDo">
             <button class="button" 
                     @click="addToDo"
             >Add</button>
