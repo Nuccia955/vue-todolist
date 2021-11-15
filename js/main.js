@@ -16,10 +16,21 @@ const app = new Vue ({
                 completed: true,
             },
         ],
+        newToDo: '',
     },
     methods: {
         deleteToDo(indexToDo) {
             this.todos.splice(indexToDo, 1)
+        },
+
+        addToDo() {
+            if(this.newToDo !== '') {
+                this.todos.push({
+                    text: this.newToDo,
+                    completed: false,
+                });
+                this.newToDo = '';
+            }
         }
     }
 })

@@ -20,8 +20,8 @@
 
         <!-- input new ToDo -->
         <section class="input d-flex justify-content-center mb-50">
-            <input type="text" placeholder="Write your new ToDo" class="flex-grow-1">
-            <button class="button">Add</button>
+            <input type="text" placeholder="Write your new ToDo" class="flex-grow-1" v-model.trim="newToDo">
+            <button class="button" @click="addToDo">Add</button>
         </section>
 
         <!-- ToDo List -->
